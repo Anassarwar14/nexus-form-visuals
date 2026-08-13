@@ -111,7 +111,7 @@ export function Hero() {
 
         <span
           aria-hidden
-          className="hero-ghost hero-slab pointer-events-none absolute -bottom-[8%] right-0 select-none text-[18vw] text-ink/5"
+          className="hero-ghost hero-slab pointer-events-none absolute -bottom-[26%] right-0 select-none text-[14vw] text-ink/[0.06]"
         >
           ENGINEER
         </span>

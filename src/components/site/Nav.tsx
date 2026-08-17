@@ -82,7 +82,7 @@ export function Nav() {
                 className="group relative flex items-center gap-1.5 overflow-hidden px-3 py-2"
               >
                 <span className="text-[8px] text-muted-foreground">{l.idx}</span>
-                <span className="relative block h-[1em] overflow-hidden">
+                <span className="relative block h-[1.15em] overflow-hidden leading-[1.15em]">
                   <span className="block transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:-translate-y-full">
                     {l.label}
                   </span>

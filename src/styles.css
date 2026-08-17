@@ -184,7 +184,7 @@
 @utility hero-slab {
   font-family: "Archivo", var(--font-display);
   font-weight: 900;
-  font-stretch: 125%;
+  font-stretch: 112%;
   letter-spacing: -0.045em;
   line-height: 0.8;
   text-transform: uppercase;

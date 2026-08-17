@@ -51,7 +51,7 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="hero-meta flex items-start justify-between text-[10px] uppercase tracking-[0.34em] text-muted-foreground">
+      <div className="hero-meta relative z-30 flex items-start justify-between text-[10px] uppercase tracking-[0.34em] text-muted-foreground">
         <span>{PROFILE.location} · 24°N</span>
         <span className="hidden md:block">Available — Q3 2026</span>
         <span>Portfolio ’26</span>
@@ -59,7 +59,7 @@ export function Hero() {
 
       {/* NAME */}
       <div className="relative mt-10 md:mt-0">
-        <h1 className="hero-slab relative z-10 text-[17vw] leading-[0.78] md:text-[13.5vw]">
+        <h1 className="hero-slab relative z-10 text-[17vw] leading-[0.78] md:max-w-[70%] md:text-[11.5vw]">
           <span className="hero-line block overflow-hidden">
             <span className="block">Mohammad</span>
           </span>
@@ -69,7 +69,7 @@ export function Hero() {
         </h1>
 
         {/* floating imagery in the negative space */}
-        <figure className="hero-img float-a absolute -top-[6vw] right-[2vw] z-20 hidden w-[19vw] rotate-[3deg] overflow-hidden shadow-[var(--shadow-slab)] md:block">
+        <figure className="hero-img float-a absolute -top-[7vw] right-0 z-20 hidden w-[20vw] rotate-[3deg] overflow-hidden shadow-[var(--shadow-slab)] md:block">
           <img
             src={chrome}
             alt="Liquid chrome sculpture in raking sunlight"
@@ -79,7 +79,7 @@ export function Hero() {
           />
         </figure>
 
-        <figure className="hero-img float-b absolute -bottom-[7vw] right-[24vw] z-0 hidden w-[15vw] -rotate-[5deg] overflow-hidden md:block">
+        <figure className="hero-img float-b absolute -bottom-[6vw] right-[23vw] z-0 hidden w-[14vw] -rotate-[5deg] overflow-hidden md:block">
           <img
             src={reed}
             alt="Light refracted through reeded glass"

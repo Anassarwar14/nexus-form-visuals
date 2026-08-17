@@ -59,7 +59,7 @@ export function Hero() {
 
       {/* NAME */}
       <div className="relative mt-10 md:mt-0">
-        <h1 className="hero-slab relative z-10 text-[17vw] leading-[0.78] md:max-w-[80%] md:text-[8.4vw]">
+        <h1 className="hero-slab relative z-10 text-[17vw] leading-[0.78] md:max-w-[80%] md:text-[8vw]">
           <span className="hero-line block overflow-hidden">
             <span className="block">Mohammad</span>
           </span>

@@ -182,12 +182,21 @@
 }
 
 @utility hero-slab {
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.82;
+  font-family: "Archivo", var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  letter-spacing: -0.045em;
+  line-height: 0.8;
   text-transform: uppercase;
 }
+
+@utility edito {
+  font-family: "Instrument Serif", var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
 
 /* Layered 3D extrusion for hero words */
 @utility extrude {

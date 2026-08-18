@@ -11,9 +11,22 @@ const DECK = [
   { src: reed, alt: "Light refracted through reeded glass" },
 ];
 
-function Chip({ src, alt, w = "2.6em" }: { src: string; alt: string; w?: string }) {
+function Chip({
+  src,
+  alt,
+  w = "2.6em",
+  delay = 0,
+}: {
+  src: string;
+  alt: string;
+  w?: string;
+  delay?: number;
+}) {
   return (
-    <span className="inline-chip align-middle" style={{ width: w, height: "1.5em" }}>
+    <span
+      className="inline-chip align-middle"
+      style={{ width: w, height: "1.5em", animationDelay: `${delay}s` }}
+    >
       <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover" />
     </span>
   );
@@ -110,10 +123,10 @@ export function Hero() {
 
       <div className="mt-6 grid gap-8 md:grid-cols-12 md:items-end">
         <p className="hero-meta edito col-span-6 text-[6.6vw] leading-[1.06] md:text-[2.5vw]">
-          I ship <Chip src={caustic} alt="Caustic light study" /> production systems —
-          agentic backends, <Chip src={chrome} alt="Chrome sculpture" w="3em" /> retrieval
+          I ship <Chip src={caustic} alt="Caustic light study" delay={1.1} /> production systems —
+          agentic backends, <Chip src={chrome} alt="Chrome sculpture" w="3em" delay={1.25} /> retrieval
           pipelines and <em className="text-vermilion">type-safe</em> interfaces{" "}
-          <Chip src={reed} alt="Reeded glass study" /> that stay fast under load.
+          <Chip src={reed} alt="Reeded glass study" delay={1.4} /> that stay fast under load.
         </p>
 
         <div className="hero-meta col-span-2 hidden text-[10px] uppercase leading-relaxed tracking-[0.28em] text-muted-foreground md:block">

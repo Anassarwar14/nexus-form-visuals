@@ -67,7 +67,7 @@ export function Experience() {
                 {job.company}
               </h3>
               <p className="mt-3 font-serif text-lg italic text-ink/70">
-                {job.role} — {job.place}
+                {job.role} ✦ {job.place}
               </p>
               <ul className="mt-6 flex-1 space-y-3 overflow-hidden text-[13px] leading-relaxed text-ink/75">
                 {job.bullets.map((b, i) => (

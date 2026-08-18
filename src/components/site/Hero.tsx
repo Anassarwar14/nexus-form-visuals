@@ -38,7 +38,12 @@ export function Hero() {
         .from(".hero-img img", { scale: 1.35, duration: 1.8, stagger: 0.12 }, 0.4)
         .from(".hero-meta", { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8)
         .from(".hero-rule", { scaleX: 0, duration: 1.2, transformOrigin: "left" }, 0.55)
-        .from(".inline-chip", { scale: 0, duration: 0.9, stagger: 0.08, ease: "back.out(2)" }, 1);
+        .fromTo(
+          ".inline-chip",
+          { scale: 0 },
+          { scale: 1, duration: 0.9, stagger: 0.08, ease: "back.out(2)", clearProps: "transform" },
+          1,
+        );
 
       const onMove = (e: PointerEvent) => {
         const x = e.clientX / window.innerWidth - 0.5;
@@ -68,7 +73,7 @@ export function Hero() {
 
       {/* NAMEPLATE */}
       <div className="relative mt-16 md:mt-6">
-        <h1 className="nameplate relative z-10 text-[16vw] md:max-w-[70%] md:text-[8.4vw]">
+        <h1 className="nameplate relative z-10 text-[16vw] md:max-w-[86%] md:text-[7.4vw]">
           <span className="hero-line block overflow-hidden">
             <span className="block">Mohammad</span>
           </span>
@@ -107,7 +112,7 @@ export function Hero() {
         </figure>
       </div>
 
-      <div className="hero-rule mt-20 h-px w-full bg-ink/15 md:mt-28" aria-hidden />
+      <div className="hero-rule mt-16 h-px w-full bg-ink/15 md:mt-20" aria-hidden />
 
       <div className="mt-6 grid gap-8 md:grid-cols-12 md:items-end">
         <p className="hero-meta edito col-span-6 text-[6.6vw] leading-[1.06] md:text-[2.5vw]">

@@ -97,7 +97,7 @@ export function Hero() {
 
         <figure className="hero-img float-b absolute -bottom-[7vw] right-[24vw] z-0 hidden w-[13vw] -rotate-[5deg] overflow-hidden md:block">
           <img
-            src={DECK[(active + 1) % DECK.length].src}
+            src={DECK[(active + 1) % DECK.length]!.src}
             alt="Art-directed texture study"
             width={1024}
             height={768}
@@ -142,8 +142,8 @@ export function Hero() {
       {/* mobile deck */}
       <div className="hero-img mt-8 aspect-[16/9] w-full overflow-hidden md:hidden">
         <img
-          src={DECK[active].src}
-          alt={DECK[active].alt}
+          src={DECK[active]!.src}
+          alt={DECK[active]!.alt}
           width={1024}
           height={1280}
           className="h-full w-full object-cover"

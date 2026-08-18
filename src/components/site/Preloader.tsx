@@ -41,7 +41,7 @@ export function Preloader({ onDone }: { onDone?: () => void }) {
             yPercent: 0,
             opacity: 1,
             filter: "blur(0px)",
-            duration: i === 0 ? 0.5 : 0.28,
+            duration: i === 0 ? 0.4 : 0.22,
             ease: "expo.out",
           },
         );
@@ -49,13 +49,13 @@ export function Preloader({ onDone }: { onDone?: () => void }) {
           yPercent: -55,
           opacity: 0,
           filter: "blur(8px)",
-          duration: 0.24,
+          duration: 0.2,
           ease: "power2.in",
-          delay: i === GREETINGS.length - 1 ? 0.45 : 0.06,
+          delay: i === GREETINGS.length - 1 ? 0.35 : 0.03,
         });
       });
 
-      tl.to(".pre-dot", { scale: 26, duration: 0.7, ease: "expo.inOut" }, "-=0.1");
+      tl.to(".pre-dot", { scale: 220, duration: 0.7, ease: "expo.inOut" }, "-=0.1");
       tl.to(".pre-panel", { yPercent: -101, duration: 0.9, ease: "expo.inOut" }, "-=0.35");
       tl.to(root.current, { autoAlpha: 0, duration: 0.2 }, "-=0.15");
     }, root);

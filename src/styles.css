@@ -190,6 +190,58 @@
   text-transform: uppercase;
 }
 
+/* Sentence-case display face used for the nameplate + big statements */
+@utility nameplate {
+  font-family: "Syne", "Archivo", var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.82;
+  text-transform: none;
+}
+
+/* Silk: slow drifting warm bands behind the hero */
+@utility silk {
+  background:
+    radial-gradient(60% 80% at 20% 20%, oklch(0.86 0.09 70 / 55%), transparent 70%),
+    radial-gradient(50% 70% at 85% 30%, oklch(0.8 0.11 205 / 35%), transparent 70%),
+    repeating-linear-gradient(
+      108deg,
+      oklch(0.93 0.02 90 / 0%) 0px,
+      oklch(0.63 0.238 32 / 6%) 40px,
+      oklch(0.93 0.02 90 / 0%) 90px
+    );
+  background-size: 180% 180%, 180% 180%, 200% 200%;
+  animation: silk-drift 26s ease-in-out infinite alternate;
+  filter: blur(14px);
+}
+
+@keyframes silk-drift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0% 50%;
+  }
+  100% {
+    background-position: 30% 40%, 60% 60%, 60% 50%;
+  }
+}
+
+/* Small inline media chips embedded inside running text */
+@utility inline-chip {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 999px;
+  margin: 0 0.18em;
+  box-shadow: var(--shadow-slab);
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  &:hover {
+    transform: translateY(-0.12em) rotate(-3deg) scale(1.16);
+    border-radius: 0.35rem;
+  }
+}
+
 @utility edito {
   font-family: "Instrument Serif", var(--font-serif);
   font-weight: 400;

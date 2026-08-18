@@ -35,7 +35,7 @@ export function Contact() {
         <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-bone/50">
           Open to full-time & contract work
         </p>
-        <h2 className="mt-8 hero-slab text-[16vw] leading-[0.8] md:text-[13vw]">
+        <h2 className="mt-8 nameplate text-[16vw] leading-[0.8] md:text-[13vw]">
           <span className="contact-word block overflow-hidden">
             <span className="block">Let&apos;s</span>
           </span>

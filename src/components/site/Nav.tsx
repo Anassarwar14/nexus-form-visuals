@@ -64,9 +64,9 @@ export function Nav() {
     >
       <div className="flex items-center justify-between px-5 py-3.5 text-[10px] uppercase tracking-[0.28em] md:px-10">
         <a href="#top" className="nav-item flex items-baseline gap-3">
-          <span className="hero-slab text-base leading-none tracking-[-0.03em]">MA</span>
+          <span className="nameplate text-base leading-none tracking-[-0.03em]">MA</span>
           <span className="hidden text-muted-foreground md:inline">
-            Full stack · AI engineer
+            Full stack ✦ AI engineer
           </span>
         </a>
 

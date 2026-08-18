@@ -37,13 +37,7 @@ export function Hero() {
         .to(".hero-img", { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, stagger: 0.12 }, 0.4)
         .from(".hero-img img", { scale: 1.35, duration: 1.8, stagger: 0.12 }, 0.4)
         .from(".hero-meta", { y: 24, opacity: 0, duration: 1, stagger: 0.07 }, 0.8)
-        .from(".hero-rule", { scaleX: 0, duration: 1.2, transformOrigin: "left" }, 0.55)
-        .fromTo(
-          ".inline-chip",
-          { scale: 0 },
-          { scale: 1, duration: 0.9, stagger: 0.08, ease: "back.out(2)", clearProps: "transform" },
-          1,
-        );
+        .from(".hero-rule", { scaleX: 0, duration: 1.2, transformOrigin: "left" }, 0.55);;
 
       const onMove = (e: PointerEvent) => {
         const x = e.clientX / window.innerWidth - 0.5;

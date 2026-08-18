@@ -34,14 +34,17 @@ function Index() {
   useSmoothScroll();
 
   return (
-    <main className="grain relative">
-      <Nav />
-      <Hero />
-      <Marquee />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-    </main>
+    <>
+      <Preloader />
+      <main className="grain relative">
+        <Nav />
+        <Hero />
+        <Marquee />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
 }

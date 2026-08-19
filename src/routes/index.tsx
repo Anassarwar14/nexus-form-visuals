@@ -41,6 +41,7 @@ function Index() {
       <main className="grain relative">
         <Nav />
         <Hero />
+        <BuildThings />
         <Marquee />
         <About />
         <Experience />

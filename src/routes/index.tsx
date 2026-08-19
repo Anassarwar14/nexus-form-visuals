@@ -3,6 +3,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { Preloader } from "@/components/site/Preloader";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
+import { BuildThings } from "@/components/site/BuildThings";
 import { Marquee } from "@/components/site/Marquee";
 import { About } from "@/components/site/About";
 import { Experience } from "@/components/site/Experience";
@@ -40,6 +41,7 @@ function Index() {
       <main className="grain relative">
         <Nav />
         <Hero />
+        <BuildThings />
         <Marquee />
         <About />
         <Experience />

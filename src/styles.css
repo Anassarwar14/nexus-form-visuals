@@ -190,14 +190,53 @@
   text-transform: uppercase;
 }
 
-/* Sentence-case display face used for the nameplate + big statements */
+/* Neo-grotesque display face used for the nameplate + big statements */
 @utility nameplate {
-  font-family: "Syne", "Archivo", var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-family: "Archivo", var(--font-display);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -0.045em;
   line-height: 0.82;
-  text-transform: none;
+  text-transform: uppercase;
 }
+
+/* "I build things" — letters filled with overlapping colour circles */
+@utility confetti-text {
+  position: relative;
+  color: oklch(0.933 0.017 91);
+  background-image:
+    radial-gradient(circle at 12% 40%, oklch(0.63 0.238 32) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 26% 65%, oklch(0.78 0.13 205) 0 10%, transparent 10.5%),
+    radial-gradient(circle at 38% 30%, oklch(0.86 0.17 88) 0 11%, transparent 11.5%),
+    radial-gradient(circle at 52% 70%, oklch(0.55 0.2 300) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 66% 35%, oklch(0.63 0.238 32) 0 10%, transparent 10.5%),
+    radial-gradient(circle at 78% 62%, oklch(0.78 0.13 205) 0 13%, transparent 13.5%),
+    radial-gradient(circle at 90% 38%, oklch(0.86 0.17 88) 0 11%, transparent 11.5%);
+  background-size: 180% 180%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: confetti-pan 18s ease-in-out infinite alternate;
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px oklch(0.933 0.017 91 / 45%);
+    pointer-events: none;
+  }
+}
+
+@keyframes confetti-pan {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 
 /* Silk: slow drifting warm bands behind the hero */
 @utility silk {

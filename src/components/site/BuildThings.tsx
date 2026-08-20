@@ -16,10 +16,12 @@ function letterFill(i: number) {
   const pick = (n: number) => PALETTE[(i * 3 + n) % PALETTE.length];
   return {
     backgroundImage: [
-      `radial-gradient(circle at 22% 30%, ${pick(0)} 0 46%, transparent 47%)`,
-      `radial-gradient(circle at 74% 40%, ${pick(1)} 0 42%, transparent 43%)`,
-      `radial-gradient(circle at 40% 82%, ${pick(2)} 0 44%, transparent 45%)`,
-      `radial-gradient(circle at 88% 88%, ${pick(3)} 0 36%, transparent 37%)`,
+      `radial-gradient(circle at 20% 24%, ${pick(0)} 0 26%, transparent 27%)`,
+      `radial-gradient(circle at 62% 18%, ${pick(1)} 0 22%, transparent 23%)`,
+      `radial-gradient(circle at 34% 56%, ${pick(2)} 0 24%, transparent 25%)`,
+      `radial-gradient(circle at 78% 62%, ${pick(3)} 0 26%, transparent 27%)`,
+      `radial-gradient(circle at 48% 90%, ${pick(5)} 0 24%, transparent 25%)`,
+      `radial-gradient(circle at 88% 92%, ${pick(0)} 0 20%, transparent 21%)`,
       `linear-gradient(${pick(4)}, ${pick(4)})`,
     ].join(","),
     WebkitBackgroundClip: "text",
@@ -54,7 +56,7 @@ export function BuildThings() {
   return (
     <section className="relative bg-ink px-5 py-20 md:px-10 md:py-28">
       <h2
-        className="nameplate flex flex-wrap text-[15.5vw] leading-[0.85]"
+        className="nameplate flex w-full flex-nowrap justify-between whitespace-nowrap text-[11.6vw] leading-[0.9]"
         aria-label={WORD}
       >
         {WORD.split("").map((ch, i) =>

@@ -35,7 +35,7 @@ export function Hero() {
     >
       <div className="silk pointer-events-none absolute inset-0 -z-10" aria-hidden />
 
-      <div className="hero-frame pointer-events-none absolute left-1/2 top-[13vh] z-10 aspect-[4/5] w-[62vw] -translate-x-1/2 overflow-hidden shadow-[var(--shadow-slab)] md:w-[26vw]">
+      <div className="hero-frame pointer-events-none absolute bottom-[9vh] left-1/2 z-10 aspect-[4/5] w-[56vw] -translate-x-1/2 md:w-[27vw] overflow-hidden shadow-[var(--shadow-slab)]">
         <img
           src={portal}
           alt="Abstract chromatic portal print in electric blue and molten orange"

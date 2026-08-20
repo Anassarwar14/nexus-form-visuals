@@ -38,7 +38,8 @@ const CHIPS = [
 ];
 
 function Chip({ i }: { i: number }) {
-  const c = CHIPS[i];
+  const c = CHIPS[i]!;
+
   return (
     <span
       className="inline-chip h-[1.05em] align-middle"

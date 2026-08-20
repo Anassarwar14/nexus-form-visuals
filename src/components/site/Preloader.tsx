@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const NAMES = ["أنس", "アナス", "안녕 아나스", "Anas"];
+const NAMES = ["أنس", "アナス", "아나스", "Anas"];
 
 export function Preloader({ onDone }: { onDone?: () => void }) {
   const root = useRef<HTMLDivElement>(null);
